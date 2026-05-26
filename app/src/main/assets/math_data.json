@@ -1,0 +1,87 @@
+{
+    "topics": [
+        {
+            "id": "calc1_limits",
+            "title": "Limits",
+            "description": "Introduction to limits and continuity.",
+            "lessons": [
+                {
+                    "id": "limit_def",
+                    "title": "Definition of a Limit",
+                    "content": "Let $f(x)$ be a function defined on an interval that contains $x=a$, except possibly at $x=a$. Then we say that,\n\n$$\\lim_{x \\to a} f(x) = L$$\n\nif for every number $\\epsilon > 0$ there is some number $\\delta > 0$ such that $|f(x) - L| < \\epsilon$ whenever $0 < |x - a| < \\delta$. This is the formal $\\epsilon-\\delta$ definition of a limit.",
+                    "interactive": true
+                },
+                {
+                    "id": "limit_props",
+                    "title": "Limit Properties",
+                    "content": "A fundamental property is that the limit of a sum is the sum of the limits:\n\n$$\\lim_{x \\to a} [f(x) + g(x)] = \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)$$\n\nAlso, for products: $\\lim_{x \\to a} [f(x)g(x)] = \\lim_{x \\to a} f(x) \\cdot \\lim_{x \\to a} g(x)$.",
+                    "interactive": true
+                }
+            ]
+        },
+        {
+            "id": "calc1_derivatives",
+            "title": "Derivatives",
+            "description": "Rules of differentiation.",
+            "lessons": [
+                {
+                    "id": "deriv_def",
+                    "title": "Definition of the Derivative",
+                    "content": "The derivative of $f(x)$ with respect to $x$ is the function $f'(x)$ and is defined as,\n\n$$f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$$\n\nThis represents the slope of the tangent line to the function at any point $x$.",
+                    "interactive": true
+                },
+                {
+                    "id": "deriv_rules",
+                    "title": "Power Rule & Chain Rule",
+                    "content": "The Power Rule for a polynomial $f(x) = x^n$ states that:\n\n$$f'(x) = nx^{n-1}$$\n\nThe Chain Rule is incredibly important for composite functions. If $h(x) = f(g(x))$, then:\n\n$$h'(x) = f'(g(x))g'(x)$$",
+                    "interactive": true
+                }
+            ]
+        },
+        {
+             "id": "calc1_integrals",
+             "title": "Integrals",
+             "description": "Anti-derivatives and area under the curve.",
+             "lessons": [
+                 {
+                     "id": "integral_def",
+                     "title": "Definite Integral",
+                     "content": "The definite integral of a continuous function $f(x)$ over the interval $[a, b]$ is denoted by:\n\n$$\\int_{a}^{b} f(x) dx$$\n\nIt represents the signed area between the $x$-axis and the graph of the function.",
+                     "interactive": true
+                 }
+             ]
+        }
+    ],
+    "quizzes": [
+        {
+            "id": "q1",
+            "topic_id": "calc1_limits",
+            "question": "What is the value of $\\lim_{x \\to 2} x^2$?",
+            "options": [
+                {"id": "o1", "content": "4", "is_correct": true},
+                {"id": "o2", "content": "2", "is_correct": false},
+                {"id": "o3", "content": "Undefined", "is_correct": false}
+            ]
+        },
+        {
+            "id": "q2",
+            "topic_id": "calc1_derivatives",
+            "question": "If $f(x) = 3x^2 + 2x$, what is $f'(x)$?",
+            "options": [
+                {"id": "o1", "content": "$6x + 2$", "is_correct": true},
+                {"id": "o2", "content": "$6x$", "is_correct": false},
+                {"id": "o3", "content": "$3x + 2$", "is_correct": false}
+            ]
+        },
+        {
+            "id": "q3",
+            "topic_id": "calc1_integrals",
+            "question": "Evaluate $\\int x dx$.",
+            "options": [
+                {"id": "o1", "content": "$\\frac{1}{2}x^2 + C$", "is_correct": true},
+                {"id": "o2", "content": "$x^2 + C$", "is_correct": false},
+                {"id": "o3", "content": "$\\frac{1}{3}x^3 + C$", "is_correct": false}
+            ]
+        }
+    ]
+}
